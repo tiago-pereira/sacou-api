@@ -18,22 +18,5 @@ services:
       timeout: 5s
       retries: 5
 
-  api:
-    build: .
-    container_name: sacou_api
-    environment:
-      DATABASE_URL: postgres://postgres:postgres@postgres:5432/sacou_api
-      DB_HOST: postgres
-      DB_PORT: 5432
-      DB_USERNAME: postgres
-      DB_PASSWORD: postgres
-      DB_NAME: sacou_api
-    ports:
-      - "3000:3000"
-    depends_on:
-      postgres:
-        condition: service_healthy
-    command: ./main
-
 volumes:
   postgres_data:
