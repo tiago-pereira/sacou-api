@@ -33,7 +33,7 @@ func StartServer() {
 		fmt.Fprintln(w, "API rodando!")
 	})
 
-	log.Println("Server running at http://localhost:3000")
-	log.Fatal(http.ListenAndServe(":3000", mux))
+	log.Println("Server running at http://localhost:8080")
+	log.Fatal(http.ListenAndServe(":8080", mux))
 
 }
