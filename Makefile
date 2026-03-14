@@ -1,6 +1,6 @@
 .PHONY: migrate-up migrate-down sqlc-generate run dev-start
 
-DB_URL = postgres://postgres:postgres@localhost:5432/sacou_api?sslmode=disable
+DB_URL = postgresql://postgres:kQFCsXWFkSinVEkXqtVOPvlAdIxLKzFG@postgres.railway.internal:5432/railway
 
 migrate-up:
 	migrate -path db/migrations -database "$(DB_URL)" up
